@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+    </style>
+    <label for="phytotal">
+        total number of physics <input type="number" id="phytotal">
+    </label>
+    <label for="phyobtained">
+        obtained number of physics <input type="number" id="phyobtained">
+    </label>
+    <label for="chemtotal">
+        total number of chemistry <input type="number" id="chemtotal">
+    </label>
+    <label for="chemobtained">
+        obtained number of chemistry <input type="number" id="chemtotal">
+    </label>
+    <label for="phytotal">
+        total number of physics <input type="number" id="phytotal">
+    </label>
+    <label for="phyobtained">
+        obtained number of physics <input type="number" id="phyobtained">
+    </label>
+    <label for="chemtotal">
+        total number of chemistry <input type="number" id="chemtotal">
+    </label>
+    <label for="chemobtained">
+        obtained number of chemistry <input type="number" id="chemtotal">
+    </label>
+
+    <button onclick="checkout()">check</button>
+
+
+    <div class="">
+        <table>
+            <tr>
+                <th>subject</th>
+                <th>total</th>
+                <th>obtained</th>
+                <th>percentage</th>
+                <th>grade</th>
+
+            </tr>
+            <tr>
+                <th>physics</th>
+                <td id="showtotalphysics"></th>
+                <td id="showobtainedphysics"></th>
+                <td id="showpercentagephysics"></th>
+                <td id="showgradephysics"></th>
+
+            </tr>
+            <tr>
+                <th>chemistry</th>
+                <td id="showtotalchem"></th>
+                <td id="showobtainedchem"></th>
+                <td id="showpercentagechem"></th>
+                <td id="showgradechem"></th>
+
+            </tr>
+            <tr>
+                <th>math</th>
+                <td id="totalchem"></th>
+                <td id=""></th>
+                <td id="showpercentagemath"></th>
+            </tr>
+            <!-- <tr>
+                <th>math</th>
+                <td id="totalchem"></th>
+                <td id=""></th>
+                <td id="showpercentagemath"></th>
+            </tr> -->
+        </table>
+    </div>
+
+    <script>
+        function checkout(){
+            let totalnumberofphysics = Number.getElementById("phytotal".value);
+            let obtainednumberofphysics = Number.getElementById("phyobtained".value);
+            let percentageofphysics = (obtainednumberofphysics/totalnumberofphysics)*100
+            let totalnumberofchemistry = Number.getElementById("chemtotal".value);
+            let obtainednumberofchemistry = Number.getElementById("chemobtained".value);
+            let totalnumberofmath = Number.getElementById("mathtotal".value);
+            let obtainednumberofmath = Number.getElementById("chemobtained".value);
+
+            document.getElementsById("showtotalphy").innerText = totalnumberofphysics;
+            document.getElementById("showobtainedphy").innerText = obtainednumberofphysics;
+            document.getElementById("showpercentagephy").innerText = percentageofphysics +"%";
+            if(percentageofphysics >= 80){
+                document.getElementById("showgradephysics").innerText = "A+"
+            }else if(percentageofphysics >= 60){
+                document.getElementById("showgradephysics").innerText = "A"
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            let totalnumberofAllsubjects = totalnumberofphysics + totalnumberofchemistry + totalnumberofmath
+            let obtainednumberofallsubject = obtainednumberofphysics + obtainednumberofchemistry + obtainednumberofmath
+             let percentageofallsubjects = (obtainednumberofallsubject / totalnumberofAllsubjects) * 100
+            
+
+
+
+        }
+    </script>
+</body>
+</html>
